@@ -1,0 +1,75 @@
+.top {
+	height: 500px;
+	background-color: #33bbff;
+}
+
+.title {
+	height: 50px;
+	background-color: #2db300;
+	font-size: 25px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 50px;
+}
+
+.subtitle1 {
+	height: 50px;
+	background-color: #2db300;
+	font-size: 25px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 50px;
+
+	/* 这里是相对于上一个同级div的margin距离 */
+	margin-top: 10px;
+}
+
+.subtitle2 {
+	position: absolute;
+
+	height: 50px;
+	background-color: #2db300;
+	font-size: 25px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 50px;	
+
+	margin-top: 10px;
+}
+
+.subtitle3 {
+	position: absolute;
+
+	height: 50px;
+	background-color: #2db300;
+	font-size: 25px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 50px;	
+
+	margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
