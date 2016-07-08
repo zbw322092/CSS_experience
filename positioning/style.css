@@ -1,0 +1,219 @@
+.top {
+	height: 800px;
+	background-color: #33bbff;
+}
+
+.title {
+	height: 50px;
+	background-color: #2db300;
+	font-size: 25px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 50px;
+}
+
+.subtitle1 {
+	height: 50px;
+	background-color: #2db300;
+	font-size: 25px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 50px;
+
+	/* 这里是相对于上一个同级div的margin距离 */
+	margin-top: 10px;
+}
+
+
+/* 在这里subtitle2 和 subtitle3都用了position: relative; 但是和没有这个样式
+出来的效果是一样的，因为没有使用top,left之类的位置信息 */
+.subtitle2 {
+	position: relative;
+
+	height: 50px;
+	background-color: #2db300;
+	font-size: 25px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 50px;	
+
+	margin-top: 10px;
+}
+
+.subtitle3 {
+	position: relative;
+
+	height: 50px;
+	background-color: #2db300;
+	font-size: 25px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 50px;	
+
+	margin-top: 10px;
+}
+
+/* 和上面一样，这是使用了relative的定位，因为有了top这样的位置信息，它往下移了 */
+.subtitle4 {
+	position: relative;
+
+	height: 50px;
+	background-color: #2db300;
+	font-size: 25px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 50px;	
+
+	margin-top: 10px;
+	top: 50px;
+}
+
+/* 如果subtitle5不设置relative的位置，那么它的margin-top是相对于subtitle4
+原来应该在的位置，而不是subtitle4现在处于的位置。而样式中的top属性是不起作用的 */
+.subtitle5 {
+	/*position: relative;*/
+
+	height: 50px;
+	background-color: #993399;
+	font-size: 25px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 50px;	
+
+	margin-top: 10px;
+	top: 50px;
+}
+
+/* 这里可以验证的就是如果什么位置信息都不设置，那么它的最终位置就是相对于subtitle5
+的magin-top: 10px; */
+.subtitle6 {
+	/*position: relative;*/
+
+	height: 50px;
+	background-color: #993399;
+	font-size: 25px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 50px;	
+
+	margin-top: 10px;
+	top: 50px;
+}
+
+/* 如果这里设置top属性，只是将位置设为absolute，那么它将正常的处于subtitle6下面
+margin-top:10px;的地方，但是它的width变成了文字的所占的宽度。 
+这里可以通过手动的设置宽度属性来改变效果 */
+.subtitle7 {
+	position: absolute;
+
+	height: 50px;
+	background-color: #993399;
+	font-size: 25px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 50px;	
+
+	margin-top: 10px;
+	/*top: 50px;*/
+}
+
+/* 如果这里设置了absolute的位置属性，并且有top的位置属性，因为它不处于某个relative
+的子集，那么它将相对于body。这个时候它的margin和top属性都能影响其位置 */
+.subtitle8 {
+	position: absolute;
+
+	height: 50px;
+	background-color: #993399;
+	font-size: 25px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 50px;	
+
+	margin-top: 10px;
+	top: 50px;
+}
+
+/* 在这里在设置一个subtitle9，没有设置top值，那么它被放置在了subtitle6下面10px处，
+也就是说它的位置是根据subtitle6来定的，subtitle6往下或者往上移动subtitle7、9的
+位置都会随之移动。然后8不会有任何影响，它也不会影响别人 */
+.subtitle9 {
+	position: absolute;
+
+	height: 50px;
+	background-color: #993399;
+	font-size: 25px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 50px;	
+
+	margin-top: 10px;
+	/*top: 50px;*/
+}
+
+/* 这里再添加一个位置absolute的subtitle10，它还是会处在subtitle6下方10px处，和
+7、9重合。subtitle10的位置只会相对于上一个处在正常element flow中的元素。它不会
+相对于9，因为9也是absloute的位置，它也脱离了element flow */
+.subtitle10 {
+	position: absolute;
+
+	height: 50px;
+	background-color: #993399;
+	font-size: 25px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 50px;	
+
+	margin-top: 10px;
+	/*top: 50px;*/
+}
+
+/* 处于正常element flow中 */
+.subtitle11 {
+	/*position: absolute;*/
+
+	height: 50px;
+	background-color: #993399;
+	font-size: 25px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 50px;	
+
+	margin-top: 10px;
+	/*top: 50px;*/
+}
+
+/* 位置相对于11。11和12都是正常的position，所以位置都是在element flow中应该在的
+位置 */
+.subtitle12 {
+	/*position: absolute;*/
+
+	height: 50px;
+	background-color: #993399;
+	font-size: 25px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 50px;	
+
+	margin-top: 10px;
+	/*top: 50px;*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
