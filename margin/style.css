@@ -1,0 +1,153 @@
+.top {
+	height: 1500px;
+	background-color: #33bbff;
+}
+
+.margin1 {
+	width: 200px;
+	margin: 0 auto;
+	background-color: #ff9999;
+}
+
+/* 使用margin:0 auto;水平居中的方法在absolute定位下是不管用的 */
+.margin2 {
+	position: absolute;
+	width: 200px;
+	margin: 0 auto;
+	background-color: #ff9999;	
+}
+
+/* 想实现水平居中，那么width必须设置，不然width默认成了body的宽度 
+这里宽度设置成百分比也能实现水平居中的效果 */
+.margin3 {
+	/*position: absolute;*/
+	/*width: 200px;*/
+	margin: 0 auto;
+	background-color: #ff9999;
+	margin-top: 20px;
+}
+
+
+/* 由于margin collapse，下面两例中两个div之间的距离是40px，而不是70px（取两者
+之间较大者）。
+margin collapse只对margin-top和margin-bottom管用，对margin-left和margin-right
+ 无效*/
+.margin4 {
+	width: 200px;
+	margin-top: 10px;
+	margin-bottom: 40px;
+	background-color: #ff9999;
+}
+
+.margin5 {
+	width: 200px;
+	margin-top: 30px;
+	background-color: #ff9999;
+}
+
+/* 负的magrin简单的说就是往正常方向的反方向移动的距离 */
+.margin6 {
+	width: 200px;
+	margin-top: -30px;
+	background-color: #ff9999;
+}
+
+/* 下面两例中magrin7的margin-bottom是负数，那么它和下面div之间的距离就是
+40-10=30px */
+.margin7 {
+	width: 200px;
+	margin-top: 40px;
+	margin-bottom: -10px;
+	background-color: #00e600;
+}
+
+.margin8 {
+	width: 200px;
+	margin-top: 40px;
+	margin-bottom: -10px;
+	background-color: #00e600;
+}
+
+/* 当margin-top的值大于等于-10px小于等于0的时候，margin9的位置是一样的, 他们之间
+的距离都是-10px，当小于-10px或者大于0的时候，位置会不一样，详见页面效果。总结起来，
+当数值都为负数的时候，margin collapse向小的看齐 */
+.margin9 {
+	width: 200px;
+	margin-top: -8px;
+	background-color: #cc6699;
+}
+
+/* 下面两例说明了当margin相等的时候，还是会发生collapse，最终的margin就是这个
+相等的值 */
+.margin10 {
+	width: 200px;
+	margin-top: 20px;
+	margin-bottom: 30px;
+	background-color: #cc6699;	
+}
+
+.margin11 {
+	width: 200px;
+	margin-top: 30px;
+	background-color: #cc6699;	
+}
+
+
+/* 在下面的i例子中，chunk1和chunk3的margin-top分别是10px和20px，那么就向20px看齐。
+同时注意，在不设置位置信息的情况下，nesting的block elements是像下面三个例子中这样子
+排列的。 */
+.chunk1 {
+	height: 300px;
+	width: 500px;
+	background-color: #ff9e2c;
+	margin-top: 10px;
+}
+
+.chunk2 {
+	height: 250px;
+	width: 450px;
+	background-color: #eeee78;
+}
+
+.chunk3 {
+	height: 200px;
+	width: 400px;
+	background-color: #4ecd9d;
+	margin-top: 20px;
+}
+
+/* 现在设置一个relative的div，它的top是20px，然而这个top值并不影响其参与margin 
+collapse，如果将其设置为大于20px的值，那么整体的div都会向下移动，详见页面 */
+.chunk4 {
+	position: relative;
+	top: 20px;
+	height: 150px;
+	width: 350px;
+	background-color: #6c4ecd;
+	/*margin-top: 20px;*/
+	margin-top: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
