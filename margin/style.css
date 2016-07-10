@@ -93,9 +93,10 @@ margin collapse只对margin-top和margin-bottom管用，对margin-left和margin-
 }
 
 
-/* 在下面的i例子中，chunk1和chunk3的margin-top分别是10px和20px，那么就向20px看齐。
+/* 在下面的例子中，chunk1和chunk3的margin-top分别是10px和20px，那么就向20px看齐。
 同时注意，在不设置位置信息的情况下，nesting的block elements是像下面三个例子中这样子
-排列的。 */
+排列的。
+注意，当chunk3设置margin-left的时候，是相对于上一层父级的 */
 .chunk1 {
 	height: 300px;
 	width: 500px;
@@ -114,6 +115,7 @@ margin collapse只对margin-top和margin-bottom管用，对margin-left和margin-
 	width: 400px;
 	background-color: #4ecd9d;
 	margin-top: 20px;
+	margin-left: 20px;
 }
 
 /* 现在设置一个relative的div，它的top是20px，然而这个top值并不影响其参与margin 
@@ -130,10 +132,59 @@ collapse，如果将其设置为大于20px的值，那么整体的div都会向�
 
 
 
+/* 注意，下面的例子中，每层的div都给了Padding，那么chunk44里面的margin-top就是
+相对于上层级的父级，而不产生margin collapse */
+.chunk11 {
+	height: 300px;
+	width: 500px;
+	background-color: #ff9e2c;
+	margin-top: 10px;
+	padding: 5px;
+}
+
+.chunk22 {
+	height: 250px;
+	width: 450px;
+	background-color: #eeee78;
+	padding: 5px;
+}
+
+.chunk33 {
+	height: 200px;
+	width: 400px;
+	background-color: #4ecd9d;
+	margin-top: 20px;
+	padding: 5px;
+}
+
+.chunk44 {
+/*	position: relative;
+	top: 20px;*/
+	height: 150px;
+	width: 350px;
+	background-color: #6c4ecd;
+	margin-top: 40px;
+	padding: 5px;
+}
 
 
+/* 在这个简化的例子中可以看出，当父级的div设置了padding，那么子级的margin-top就是
+相对于父级的 */
+.chunk5 {
+	height: 300px;
+	width: 500px;
+	background-color: #ff9e2c;
+	margin-top: 10px;
+	padding: 10px;
+}
 
-
+.chunk6 {
+	height: 250px;
+	width: 450px;
+	background-color: #eeee78;
+	margin-top: 20px;
+	/*padding: 10px;*/
+}
 
 
 
