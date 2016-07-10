@@ -1,5 +1,5 @@
 .top {
-	height: 800px;
+	height: 1500px;
 	background-color: #33bbff;
 }
 
@@ -196,6 +196,55 @@ margin-top:10px;的地方，但是它的width变成了文字的所占的宽度�
 
 	margin-top: 10px;
 	/*top: 50px;*/
+}
+
+
+/* 注意，下面两个例子中里层的div的margin-top都不是指它和外层div之间的margin的
+长度 */
+.chunk1 {
+	width: 150px;
+	height: 150px;
+	background-color: #993399;
+	font-size: 25px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 50px;	
+
+	margin-top: 10px;
+}
+
+.chunk2 {
+	width: 100px;
+	height: 100px;
+	background-color: #e6ac00;
+	font-size: 25px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 50px;	
+
+	margin-top: 10px;
+}
+
+.chunk3 {
+	width: 150px;
+	height: 150px;
+	background-color: #993399;
+	font-size: 25px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 50px;	
+
+	margin-top: 10px;
+}
+
+.chunk4 {
+	background-color: #e6ac00;
+	font-size: 25px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 50px;	
+
+	margin-top: 10px;
 }
 
 
