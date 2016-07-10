@@ -1,0 +1,188 @@
+.top {
+	height: 1500px;
+	background-color: #33bbff;
+}
+
+
+/* 注意，下面两个例子中里层的div的margin-top都不是指它和外层div之间的margin的
+长度 */
+.chunk1 {
+	width: 150px;
+	height: 150px;
+	background-color: #993399;
+	font-size: 25px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 50px;	
+
+	margin-top: 10px;
+}
+
+.chunk2 {
+	width: 100px;
+	height: 100px;
+	background-color: #e6ac00;
+	font-size: 25px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 50px;	
+
+	margin-top: 10px;
+}
+
+.chunk3 {
+	width: 150px;
+	height: 150px;
+	background-color: #993399;
+	font-size: 25px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 50px;	
+
+	margin-top: 10px;
+}
+
+.chunk4 {
+	background-color: #e6ac00;
+	font-size: 25px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 50px;	
+
+	margin-top: 10px;
+}
+
+.chunk5 {
+	width: 150px;
+	height: 150px;
+	background-color: #993399;
+	font-size: 25px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 50px;	
+
+	margin-top: 10px;
+}
+
+.chunk6 {
+	background-color: #e6ac00;
+	font-size: 25px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 50px;	
+
+	margin-top: 10px;
+}
+
+
+
+/* 下面两个例子中因为没有设置padding和border，那么width不设置或者设置成100%
+没有显示上的差别。 */
+.width1 {
+	background-color: #e6ac00;
+	font-size: 25px;
+	font-weight: bold;
+	margin-top: 10px;
+}
+
+.width2 {
+	width: 100%;
+	background-color: #e6ac00;
+	font-size: 25px;
+	font-weight: bold;
+	margin-top: 10px;
+}
+
+
+/* 因为这里有了padding和boder，width没有设置的padding和boder的方向是inward，
+而设置了wihth:100%;的方向是outward */
+.width3 {
+	background-color: #e6ac00;
+	font-size: 25px;
+	font-weight: bold;
+	padding-right: 180px;
+	margin-top: 10px;
+	border: 1px solid black;
+}
+
+.width4 {
+	width: 100%;
+	background-color: #e6ac00;
+	font-size: 25px;
+	font-weight: bold;
+	padding-right: 20px;
+	margin-top: 10px;
+	border: 1px solid black;
+}
+
+/* 位置设置成absoulte，那么Their width is only as wide as it needs to 
+be to hold the content. */
+.text1 {
+	position: absolute;
+	background-color: #b82e8a;
+	margin-top: 10px;
+}
+
+/* if the box contains a single word, the box is only as wide as that 
+word renders. If it grows to two words, it'll grow that wide. This should 
+continue until the box is 100% of the parent's width (the nearest parent 
+with relative positioning, or browser window) and then begin to wrap. */
+.text2 {
+	position: absolute;
+	background-color: #b82e8a;
+	margin-top: 50px;
+}
+
+/* 这里设置了width，那么就是根据这个width来warp */
+.text3 {
+	position: absolute;
+	width: 300px;
+	background-color: #b82e8a;
+	margin-top: 100px;
+}
+
+/* inline element的padding-left只会作用于第一行，因为那是这个inline element
+开始的地方
+padding-right会作用于这个行级元素的末尾，也就是最后一行，但是不会把这行字往左边推，
+如果设置背景的话，可以看到背景被拉长了。详见页面效果
+padding-top和pading-bottom的效果详见页面。 
+当设置了boder之后，可以清楚的看到border的开始是在第一行，结束在最后一行，而不是
+每一行是单独的一块 */
+.inline1 {
+	position: relative;
+	top: 250px;
+	background-color: #669999;
+	font-size: 30px;
+  padding-left: 60px;
+  padding-right: 100px;
+	padding-top: 10px;
+  padding-bottom: 10px;
+  border: 1px solid red;
+}
+
+.inline2 {
+	background-color: #669999;
+	font-size: 30px;
+}
+
+/* 这段文字会紧接着上面一段文字，不会自动的换一行再开始显示 */
+.inline3 {
+	background-color: #ff9999;
+	font-size: 30px;
+	padding-left: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
